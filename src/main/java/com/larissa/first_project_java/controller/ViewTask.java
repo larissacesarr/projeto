@@ -1,10 +1,9 @@
 package com.larissa.first_project_java.controller;
 
+import com.larissa.first_project_java.domain.User;
 import com.larissa.first_project_java.service.ViewTaskService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/hello-world")
@@ -19,4 +18,13 @@ public class ViewTask {
         return viewTaskService.viewTask( "Larissa");
     }
 
+    @PostMapping
+    public String viewTaskPost(@RequestBody User body) {
+        return "Hello World " + body.getName();
+    }
+
+    @PostMapping("/{id}")
+    public String viewTaskPost(@PathVariable String id, @RequestParam String filter) {
+        return "Hello World " + filter;
+    }
 }

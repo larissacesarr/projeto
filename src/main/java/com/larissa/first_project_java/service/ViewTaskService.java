@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 public class ViewTaskService {
 
     public String viewTask(String name){
-        return "Hello World" + name;
+        return "Hello World " + name;
     }
 }
