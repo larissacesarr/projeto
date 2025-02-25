@@ -1,26 +1,28 @@
 package com.larissa.first_project_java.controller;
 
-import com.larissa.first_project_java.domain.User;
-import com.larissa.first_project_java.service.ViewTaskService;
+import com.larissa.first_project_java.domain.Task;
+import com.larissa.first_project_java.repository.TaskRepository;
+import com.larissa.first_project_java.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/hello-world")
-public class ViewTask {
+public class TaskController {
 
     @Autowired
-    private ViewTaskService viewTaskService;
-
+    private TaskService taskService;
 
     @GetMapping
-    public String viewTask() {
-        return viewTaskService.viewTask( "Larissa");
+    public List<Task> getAllTasks() {
+
     }
 
     @PostMapping
-    public String viewTaskPost(@RequestBody User body) {
-        return "Hello World " + body.getName();
+    public Task createTask(@RequestBody Task task {
+        return taskService.createTask(task);
     }
 
     @PostMapping("/{id}")
