@@ -31,6 +31,7 @@ public class TaskService {
         Task task = taskRepository.findById(id).orElseThrow(() -> new RuntimeException("Task not fund!"));
         task.setTitle(taskDetails.getTitle());
         task.setDescription(taskDetails.getDescription());
+        task.setCompleted(taskDetails.getCompleted());
         return taskRepository.save(task);
     }
 
