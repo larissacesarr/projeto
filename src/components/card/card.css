@@ -1,0 +1,64 @@
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.card .completed {
+    color: #4caf50;  
+    font-weight: bold;
+}
+
+.card .pending {
+    color: #f44336; 
+    font-weight: bold;
+}
+
+.btn-cancel{
+    background-color: unset;
+    border: unset;
+    font-size: 18px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.btn-success {
+    background-color: unset;
+    border: unset;
+    font-size: 18px;
+    position: absolute;
+    top: 65%;
+    right: 8px;
+}
+
+.success{
+    background-color: unset;
+      border: unset;
+      font-size: 18px;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+}
